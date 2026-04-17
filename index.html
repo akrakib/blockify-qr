@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blockify QR Tool</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="container">
+
+<h1>Blockify QR</h1>
+
+<!-- AUTH -->
+<div id="auth">
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="login()">Login</button>
+    <button onclick="guest()">Continue as Guest</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+    <input type="text" id="data" placeholder="Enter URL or Text">
+
+    <input type="color" id="color" value="#00ffcc">
+
+    <input type="file" id="logo">
+
+    <button onclick="generateQR()">Generate QR</button>
+
+    <div id="qrcode"></div>
+
+    <button onclick="downloadQR()">Download</button>
+    <button onclick="startScanner()">Scan QR</button>
+
+    <div id="reader"></div>
+
+    <div id="history"></div>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="footer">Developer: Ak Rakib</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
